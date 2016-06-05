@@ -13,8 +13,8 @@
 <!-- Optional theme -->
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
 <link rel="stylesheet" type="text/css" href="style.css">
+
 
 </head>
 <body>
@@ -52,23 +52,23 @@
 <hr>
   <div class="row">
   <div class="col-lg-3">
-    <div class="well" style="text-align: center;" id="btnnl"><button class="btn btn-info btn-lg btn-block"> New Lead </button></div>
-    
-<br>
-      <div class="panel-group">
+    <div id="btnnl" class="well" style="text-align: center; "><button  class="btn btn-lg btn-block btn-info"> New Lead <span class="pull-right">18</span> </button></div>
+    <br>
+
+      <div  class="panel-group">
        
       
-        <div class="panel panel-default" >
-            <div class="panel-heading" id="btnnl">
+        <div class="panel panel-default">
+            <div id="btnnl" class="panel-heading">
               <h4 class="panel-title">
                 <button data-toggle="collapse" class="btn btn-default btn-block btn-lg btn-info" href="#collapse1" > Total Leads <a href="#"><span class="glyphicon glyphicon-menu-down pull-right"></span></a>
                 </button>
               </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse">
+            <div  style="max-height:300px; overflow: scroll;"id="collapse1" class="panel-collapse collapse">
                 <div class="panel-body"><p id="year" style="font-size:23px;"> 
                 #2016
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-info">Open</button>
                 </p>
 
@@ -78,7 +78,7 @@
                 </p></div>
                  <div class="panel-body"><p id="year" style="font-size:23px;"> 
                 #2016
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-info">Open</button>
                 </p>
 
@@ -88,7 +88,7 @@
                 </p></div>
                  <div class="panel-body"><p id="year" style="font-size:23px;"> 
                 #2016
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-info">Open</button>
                 </p>
 
@@ -99,34 +99,41 @@
             </div>
         </div>
       </div>
-  </div>
-      <div class="col-lg-9">
-          
-          <div class="well" style="text-align:left;padding-top:20px;padding-left:60px;">New Lead
+</div>
+<div class="col-lg-9">
+    <div class="well" style="text-align: left; padding-left:60px;"> New Lead <span class="bg-info" style="margin-left:600px;"> 1 to 18
+</span>
+   
+   
+    <a href="#"><span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+    <a href="#"><span class="glyphicon glyphicon-chevron-left pull-right"></span></a> </div>
+    <div class="well" style="margin:0px;">
+      <div class="row">
 
-          <span style="margin-left:600px;" class="bg-info"> 1 to 18</span>
-          <a href="#"><span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
-          <a href="#"><span class="glyphicon glyphicon-chevron-left pull-right"></span></a>
-
-          <div class="row">
-            <div col-lg-6>
-              <p>
-                <h3>Hardware Material Store</h3>
-              </p>
-              <p>
-              <h4>General Plumbing</h4>
-              </p>
-            </div>
-            <div col-lg-6>
-              
-            </div>
-          </div>
-          </div>
-        </div> 
-          </div>
+        <div class="col-lg-6"> 
+        <span class="label label-info" id="dash_labels">#2016</span>
+        <h3> Hardware material store</h3><br><h4>General Plumbing Material</h4> 
+        </div>
+        <div class="col-lg-6">
+      <div class="row"> <button class="btn btn-warning btn-lg pull-right">Edit</button></div>
+      <div class="row">
+      <span class="pull-right" id="dash_labels">
+      <span class="label label-default">Morning</span>  
+      <span class="label label-info">Noon</span> 
+      <span class="label label-default">Evening</span> 
+      <span class="label label-default">Night</span> 
+      </span>
       </div>
+      </div>
+      </div>
+
+    </div>
+
+  </div> 
   </div>
   
+    </div>
+</div>
 
 <footer>
   <div class="container">
