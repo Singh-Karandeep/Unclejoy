@@ -189,6 +189,18 @@ margin: 0px;
 #dash_labels{
 font-size: 20px;
 }
+#edit_btn{
+	
+	font-size:15px; 
+}
+#download_btn
+{
+	text-align: center;
+	margin-top: 10px;
+}
+#f_p a:hover{
+	font-size: 20px;
+}
 #for_pass a:hover{
 	font-size: 15px;
 }
