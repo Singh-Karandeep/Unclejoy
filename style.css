@@ -257,4 +257,84 @@ font-size: 20px;
  form input{
  	border-radius: 0px !important;
 }
+#nb{
+	margin-top: 20px;
+}
+#whystore{
+	text-align:center;
+	margin-top: 50px;
+}
 
+#whystore img{
+	width: 60%;
+	margin-bottom:20px;
+}
+#icon img{
+	width: 50%;
+
+}
+#whyuj img{
+	width: 40%;
+}
+
+#view{
+	background:transparent;
+	color: rgba(255, 102, 0, 1);
+margin-top: 40px;
+border-radius: 0px;
+border :2px solid rgba(255, 102, 0, 1);
+}
+ #view :hover{
+ 	background-color: white;
+ 	border:none;
+ }
+ .how h1{
+
+ 	text-align: center;
+ 	margin-bottom: 75px;
+ }
+ .how li{
+ 	text-align: left;
+
+}
+ .how img{
+ 	margin-bottom: 75px;
+ 	margin-top: 20px;
+ }
+button.navbar-toggle{
+margin-top: 10px;
+}
+.how h3{
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+	div.navbar-header a img{
+		margin-top: -23px;
+	}
+}
+@media only screen and (min-width: 767px){
+nav div.container-fluid ul.navbar-right li a{
+	margin-top: -10px;
+}
+}
+#nav2{
+	margin-top: 20px;
+}
+nav div.container-fluid ul#nb li a:hover{
+font-size: 5px;
+}
+.glyphicon-menu-down{
+	margin-top: 20px;
+}
+.dropdown-menu li{
+margin-top: 20px; 
+
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: #fff;
+}
+.open{
+	padding-bottom: 10px;
+}
