@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User_Edit_Profile</title>
+  <link rel="icon" type="image/png" href="logo.png">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript">
+  function f1(){
+    document.getElementById("pass_enable").style.visibility="visible";
+  }
+
+  function f2() {
+    document.getElementById("pass_enable").style.visibility="hidden";
+  }
+  
+</script>
+
+</head>
+<body onload="f2()">
+	<nav class="navbar navbar-default" style="min-height:90px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img width="70" height="70" alt="Brand" src="logo.png">
+      </a>
+      </div>
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">How it Works ?</a></li>
+        <li><a href="#">Our store Listings</a></li>		
+        <li><a href="#">Be a store partner</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Store Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+  
+<br>
+<div class="container">
+<div>
+  <h2 align="center">Edit Profile</h2>
+</div>
+<br>
+<br>
+  <div class="row">
+      <form action="">
+
+      <div  class="col-lg-offset-2 col-lg-4" style="border-right:1px dashed lightblue;">
+      
+      <div class="form-group">
+        <label>Name</label>
+        <input type="name"  class="form-control input-md input_radius"  value="Karandeep Singh" required=""></input>
+      </div>
+      
+      <div class="form-group">
+        <label>Address</label>
+         <input type="text" class="form-control input-md input_radius"   value="Abc Xyz" required=""></input>
+      </div>
+      
+      <div class="form-group">
+        <label>City</label>
+         <input type="text" class="form-control input-md input_radius"   value="Tilak Nagar" required=""></input>
+      </div>
+      
+      <div class="form-group">
+        <label>State</label>
+         <input type="text" class="form-control input-md input_radius"   value="New Delhi" required=""></input>
+      </div>
+      
+      
+      </div>      
+      
+      
+      <div  class="col-lg-4">
+
+      <div class="form-group">
+        <label>Pin Code</label>
+        <input type="name"  class="form-control input-md input_radius"  value="110018" required=""></input>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile</label>
+         <input type="text" class="form-control input-md input_radius"   value="9712345678" required=""></input>
+      </div>
+      
+      <div class="form-group">
+        <label>Photo</label>
+           <input type="file" class="form-control input-md input_radius"   value="Tilak Nagar"></input>      
+      </div>
+      
+      <div class="form-group">
+        <label>Email</label>
+         <input type="text" class="form-control input-md input_radius"  value="abc@gmail.com" required=""></input>
+         <br>
+      </div>
+
+      </div>
+
+      <div class="col-lg-2"></div>
+
+      
+<div id="pass_enable">
+      <div class="col-lg-offset-2 col-lg-2">
+        <center><label>Password</label></center>
+         <input type="password" class="form-control input-md input_radius"  value="" required=""></input>
+      </div>
+      
+      <div class="col-lg-offset-1 col-lg-2">
+        <center><label>Confirm Password</label></center>
+         <input type="password" class="form-control input-md input_radius"  value="" required=""></input>
+      </div>
+
+      <div class="col-lg-offset-1 col-lg-2">
+        <center><label>Current Password</label></center>
+         <input type="password" class="form-control input-md input_radius"  value="" required=""></input>
+      </div>
+
+      <div class="col-lg-2"></div>
+</div>
+
+      <div class="col-lg-4 col-lg-offset-2">
+      <br>
+       <center><a href=""  class="btn btn-info input_radius">Save Changes</a></center> 
+      </div>
+      <div class="col-lg-4">
+       <br>
+       <center><button class="btn btn-info input_radius" onclick="f1()">Change Password</button></center>
+      </div>
+      <div class="col-lg-2"></div>
+
+      <div class="col-lg-offset-2 col-lg-8">
+        <hr>
+      </div>
+      <div class="col-lg-2"></div>
+
+      <div class="col-lg-offset-2 col-lg-4">
+        <h3 align="right" style="padding:0;margin:0;">Unhappy..?</h3>
+      </div>
+      <div class="col-lg-4">
+        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete My Account</button>
+
+      </div>
+</form>
+
+<!-- Modal -->
+    
+        <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Confirm to Delete</h4>
+        </div>
+        <div class="modal-body">
+          <p>You will not be able to access any of the Unclejoy Services..!!</p>
+          <p>You will lose your previous Bookings' data.</p>
+          <p>Do you really wish to Delete..?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+    <br>
+<footer>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <ul>      
+     <li><a href="">Why Unclejoy?</a></li>
+     <li><a href="">Get your store listed.</a></li>
+     <li><a href="">How it works ?</a></li>
+     </ul>
+    </div>
+    <div class="col-md-3">
+    <ul type="none;">      
+     <li><a href="">Terms and Conditions</a></li>
+     <li><a href="">Privacy Policy</a></li>
+     <li><a href="">FAQs</a></li>
+    </ul>
+
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+       
+      
+     </div>  
+    <div class="col-md-3">
+      <ul>      
+     <li><p style="color:#fff;">About the company</p></li>
+     <li><p>UNCLEJOY is an online web platform for booking local hardware, electricals, paint and wood & timber material store.</p></li></ul>
+     
+     
+    </div>
+    </div>
+  
+  </div>
+ <div class="row" id="row2">
+   <div class="col-md-12">
+    <ul style="text-align:center">
+    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+    <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    </div>
+    <p>2015-16 &copy; Unclejoy Technology Private Limited - All rights reserved</p>
+  </div>  
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

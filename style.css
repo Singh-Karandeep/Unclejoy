@@ -338,3 +338,10 @@ margin-top: 20px;
 .open{
 	padding-bottom: 10px;
 }
+#ud_pills :hover{
+	background-color: grey;
+}
+.input_radius
+{
+	border-radius: 0px;
+}
