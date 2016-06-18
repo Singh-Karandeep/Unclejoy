@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unclejoy - India's first online material store marketplace </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="logo.png"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style_che.css">
+
+<script type="text/javascript">
+
+function f1()
+{
+  //DATE
+  
+  var dateObj = new Date();
+  
+  var month1 = dateObj.getUTCMonth() + 1; //months from 1-12
+  var day1 = dateObj.getUTCDate();
+  var year1 = dateObj.getUTCFullYear();
+  curdate = year1 + "-" + month1 + "-" + day1;
+
+  var days=6; // Days you want to subtract
+  var date = new Date();
+  var baadkidate=date.getTime();
+  var last = new Date(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  var day2 =last.getDate();
+  var month2=last.getMonth()+1;
+  var year2=last.getFullYear();
+  var res=year2 + "-" + month2 + "-" +day2;
+
+  //document.getElementById("dt").min= "2016-06-18";
+  //document.getElementById("dt").max= "2016-06-26";
+if(month1<10)
+{
+  curdate = year1 + "-0" + month1 + "-" + day1;
+}
+if(month2<10)
+{
+  res = year2 + "-0" + month2 + "-" + day2;
+}
+  document.getElementById("dt").min= curdate;
+  document.getElementById("dt").max= res;
+
+    //TIME
+    
+
+    var d = new Date();
+    var n = d.getHours();
+    var n1 = d.getMinutes();
+    if(n1>=0 && n1<=9)
+    {
+      n1="0"+n1;
+    }
+    document.getElementById("demo").innerHTML = "Current Time : "+n+" : "+n1;
+    if(n==0)
+    {
+        n=12;
+        document.getElementById("demo").innerHTML = n;
+    }
+    if(n>=18)
+    {
+      document.getElementById("radio-1").disabled = true; 
+      document.getElementById("radio-2").disabled = true; 
+      document.getElementById("radio-3").disabled = true; 
+
+      document.getElementById("l1").style.color = "#999999";
+      document.getElementById("l2").style.color = "#999999";
+      document.getElementById("l3").style.color = "#999999";
+      
+      alert("Sorry! Bookings Closed for Today. Please Try Tomorrow.")
+    }
+    else if(n>=10 && n<=12 )
+    {
+      document.getElementById("radio-1").disabled = true;
+      document.getElementById("l1").style.color = "#999999";
+    }
+    else if(n>12 && n<=17)
+    {
+      document.getElementById("radio-1").disabled = true;
+      document.getElementById("radio-2").disabled = true;
+      document.getElementById("l1").style.color = "#999999";
+      document.getElementById("l2").style.color = "#999999";
+    }
+    
+    
+    if(n>12)
+    {
+      n=n-12;
+    }
+    n=n+":"+"00";
+    
+
+};
+function f2()
+{
+    var dateObj1 = new Date();
+  //  var aajkidate= (dateObj1.getTime())/(1000*60*60*24);
+    var aajkidate=dateObj1.getTime();
+    
+    var baadkidate = document.getElementById("dt").value;
+    
+    var splitted = baadkidate.split("-", 3);
+    
+    var hoo=new Date(splitted[0]+"/"+splitted[1]+"/"+splitted[2]);
+    //var hoo=new Date("19/11/2016");
+    var diff=hoo.getTime();
+   
+    if(hoo>aajkidate)
+    {
+      document.getElementById("radio-1").disabled = false; 
+      document.getElementById("radio-2").disabled = false; 
+      document.getElementById("radio-3").disabled = false;
+      document.getElementById("l1").style.color = "#000";
+      document.getElementById("l2").style.color = "#000";
+      document.getElementById("l3").style.color = "#000"; 
+    }
+
+}
+</script>
+
+</head>
+<body onload="f1()">
+	<nav class="navbar navbar-default" style="min-height:90px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nb" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img width="70" height="70" alt="Brand" src="logo.png">
+      </a>
+      </div>
+      <div  class="collapse navbar-collapse" id="nb">
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="howitworks.html">How it Works ?</a></li>
+        <li><a href="storelist.html">Our store Listings</a></li>		
+        <li><a href="#">Be a store partner</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Store Login</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+<div  class="container"> 
+<br>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <form id="t_size">
+        <h2>Select your Date & Time for Booking</h2> 
+        <p><br></p>
+        <h4><span style="font-size:24px;"> Date: </span><input type="date" name="" min="" max="" id="dt" onchange="f2()"> </h4>
+        <p id="demo" style="font-size:17px;"></p>  
+        <p id="fs">Time : 
+        
+          <div class="form-group">
+            <div>
+            <input id="radio-1" class="radio-custom" name="radio-group" type="radio" >
+            <label for="radio-1" class="radio-custom-label" id="l1">10:00 - 12:00</label>
+            </div>
+
+            <div>
+            <input id="radio-2" class="radio-custom" name="radio-group" type="radio">
+            <label for="radio-2" class="radio-custom-label" id="l2">12:00 - 03:00</label>
+            </div>
+
+            <div>
+            <input id="radio-3" class="radio-custom" name="radio-group" type="radio">
+            <label for="radio-3" class="radio-custom-label" id="l3">03:00 - 06:00</label>
+            </div>
+         
+         </div>
+         <br>
+        </p> 
+        
+        </div>
+
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Booking Closed</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Sorry! Bookings are Closed for Today. </p>
+                  <p>Please Try Tomorrow.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <ul>      
+     <li><a href="">Why Unclejoy?</a></li>
+     <li><a href="">Get your store listed.</a></li>
+     <li><a href="">How it works ?</a></li>
+     </ul>
+    </div>
+    <div class="col-md-3">
+    <ul type="none;">      
+     <li><a href="">Terms and Conditions</a></li>
+     <li><a href="">Privacy Policy</a></li>
+     <li><a href="">FAQs</a></li>
+    </ul>
+
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+       
+      
+     </div>  
+    <div class="col-md-3">
+      <ul>      
+     <li><p style="color:#fff;">About the company</p></li>
+     <li><p>UNCLEJOY is an online web platform for booking local hardware, electricals, paint and wood & timber material store.</p></li></ul>
+     
+     
+    </div>
+    </div>
+  
+  </div>
+ <div class="row" id="row2">
+   <div class="col-md-12">
+    <ul style="text-align:center">
+    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+    <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    </div>
+    <p>2015-16 &copy; Unclejoy Technology Private Limited - All rights reserved</p>
+  </div>  
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

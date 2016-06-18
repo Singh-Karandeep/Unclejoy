@@ -273,6 +273,14 @@ font-size: 20px;
 	width: 50%;
 
 }
+#uj{
+	text-align: center;
+	font-size:60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+
+}
 #whyuj img{
 	width: 40%;
 }
@@ -344,4 +352,7 @@ margin-top: 20px;
 .input_radius
 {
 	border-radius: 0px;
+}
+#fs{
+	font-size: 25px;
 }

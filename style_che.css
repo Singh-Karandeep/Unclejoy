@@ -25,7 +25,7 @@ body {
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
     content: '';
     background: #fff;
-    border: 2px solid #ddd;
+    border: 2px solid #999;
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -36,8 +36,8 @@ body {
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
-    background: rebeccapurple;
-    box-shadow: inset 0px 0px 0px 4px #fff;
+    background: #34b0d5;
+    box-shadow: inset 0px 0px 0px 2px #fff;
 }
 
 .radio-custom + .radio-custom-label:before {
@@ -45,8 +45,8 @@ body {
 }
 
 .radio-custom:checked + .radio-custom-label:before {
-    background: #ccc;
-    box-shadow: inset 0px 0px 0px 4px #fff;
+    background: #34b0d5;
+    box-shadow: inset 0px 0px 0px 2px #fff;
 }
 
 
@@ -54,5 +54,5 @@ body {
   outline: 1px solid #ddd; /* focus style */
 }
 #t_size{
-    font-size: 30px;
+    font-size: 20px;
 }
