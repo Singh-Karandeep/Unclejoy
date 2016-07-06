@@ -74,6 +74,10 @@ if(month2<10)
         var nn=12;
        document.getElementById("demo").innerHTML = "Current Time : "+nn+" : "+n1;
     }
+    if(n>=0 && n<=17)
+    {
+      f5();
+    }
     if(n>=18)
     {
       document.getElementById("radio-1").disabled = true; 
@@ -237,7 +241,8 @@ function f5()
             </div>
          
          </div>
-         
+            <a href="Booking_1.html" class="btn btn-info">Back</a>
+           <a href=""><button class="btn btn-info" style="float:right;">Proceed</button></a> 
          <br>
         </p> 
         

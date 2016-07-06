@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unclejoy - India's first online material store marketplace </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="logo.png"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style_che.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+ 
+var x = localStorage.x; //getter
+function store_disp_1()
+{
+document.getElementById("x1").innerHTML=x;  
+}
+function store_disp_2()
+{
+document.getElementById("x2").innerHTML=x;  
+}
+function store_disp_3()
+{
+document.getElementById("x3").innerHTML=x;  
+}
+function store_disp_4()
+{
+document.getElementById("x4").innerHTML=x;  
+}
+
+  function f11(){
+    document.getElementById("pass").style.visibility="visible";
+  }
+  function f22(){
+    document.getElementById("pass").style.visibility="hidden";
+  }
+function f1()
+{
+  //DATE
+  dis();
+  var dateObj = new Date();
+  
+  var month1 = dateObj.getMonth() + 1; //months from 1-12
+  var day1 = dateObj.getDate();
+  var year1 = dateObj.getFullYear();
+  
+
+
+  var days=6; // Days you want to subtract
+  var date = new Date();
+  
+  var last = new Date(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  var day2 =last.getDate();
+  var month2=last.getMonth()+1;
+  var year2=last.getFullYear();
+  if(day1<10)
+  {
+    day1="0"+day1; 
+  }
+  if(day2<10)
+  {
+    day2="0"+day2;
+  }
+  if(month1<10)
+  {
+    month1="0"+month1; 
+  }
+  if(month2<10)
+  {
+    month2="0"+month2; 
+  }
+  var curdate = year1 + "-" + month1 + "-" + day1;
+  var res=year2 + "-" + month2 + "-" +day2;
+
+  //document.getElementById("dt").min= "2016-06-18";
+  //document.getElementById("dt").max= "2016-06-26";
+
+  //alert("Curt date is : "+curdate);
+  //alert("After 7 days date is : "+res);
+  document.getElementById("dt").value= curdate;
+  document.getElementById("dt").min= curdate;
+  document.getElementById("dt").max= res;
+
+    //TIME
+    
+
+    var d = new Date();
+    var n = d.getHours();
+    var n1 = d.getMinutes();
+  //  alert(n+" : "+n1);
+    if(n1>=0 && n1<=9)
+    {
+      n1="0"+n1;
+    }
+    document.getElementById("demo").innerHTML = "Current Time : "+n+" : "+n1;
+    if(n==0)
+    {
+        var nn=12;
+       document.getElementById("demo").innerHTML = "Current Time : "+nn+" : "+n1;
+    }
+    if(n>=18)
+    {
+      document.getElementById("radio-1").disabled = true; 
+      document.getElementById("radio-2").disabled = true; 
+      document.getElementById("radio-3").disabled = true; 
+
+      document.getElementById("l1").style.color = "#999999";
+      document.getElementById("l2").style.color = "#999999";
+      document.getElementById("l3").style.color = "#999999";
+      f4();
+      //alert("Sorry! Bookings have been Closed for Today. Please Try for Tomorrow or Coming Days.");
+
+    }
+    else if(n>=10 && n<=12 )
+    {
+      document.getElementById("radio-1").disabled = true;
+      document.getElementById("l1").style.color = "#999999";
+      f5();
+    }
+    else if(n>12 && n<=17)
+    {
+      document.getElementById("radio-1").disabled = true;
+      document.getElementById("radio-2").disabled = true;
+      document.getElementById("l1").style.color = "#999999";
+      document.getElementById("l2").style.color = "#999999";
+      f5();
+    }
+    
+};
+function dis()
+{
+  document.getElementById("radio-1").checked= false;
+  document.getElementById("radio-2").checked= false;
+  document.getElementById("radio-3").checked= false;
+}
+function f2()
+{
+    var dateObj1 = new Date();
+  //  var aajkidate= (dateObj1.getTime())/(1000*60*60*24);
+    var aajkidate=dateObj1.getTime();
+    
+    var datekivalue = document.getElementById("dt").value;
+    
+    var splitted = datekivalue.split("-", 3);
+    
+    var hoo=new Date(splitted[0]+"/"+splitted[1]+"/"+splitted[2]);
+    //var hoo=new Date("19/11/2016");
+    var baadkidate=hoo.getTime();
+    //alert(aajkidate+"\n"+baadkidate);
+    
+    if(baadkidate>=aajkidate)
+    {
+      document.getElementById("radio-1").disabled = false; 
+      document.getElementById("radio-2").disabled = false; 
+      document.getElementById("radio-3").disabled = false;
+      document.getElementById("l1").style.color = "#000";
+      document.getElementById("l2").style.color = "#000";
+      document.getElementById("l3").style.color = "#000";
+    }
+    else
+    {
+      f1();
+   /*   document.getElementById("radio-1").disabled = true;
+      document.getElementById("radio-1").checked= false;
+
+      document.getElementById("radio-2").disabled = true; 
+      document.getElementById("radio-2").checked = false;
+
+      document.getElementById("radio-3").disabled = true;
+      document.getElementById("radio-3").checked = false;
+
+      document.getElementById("l1").style.color = "#999999";
+      document.getElementById("l2").style.color = "#999999";
+      document.getElementById("l3").style.color = "#999999";  
+   */
+    }
+
+}
+function f4()
+{
+  document.getElementById("p0").innerHTML="Booking Closed";
+  document.getElementById("p1").innerHTML="Sorry! Bookings have been Closed for Today.";
+  document.getElementById("p2").innerHTML="Please Try for Tomorrow or Coming Days.";
+}
+function f5()
+{
+  document.getElementById("p0").innerHTML="Booking Open";
+  document.getElementById("p1").innerHTML="Bookings are Open for Today";  
+  document.getElementById("p2").innerHTML="You can Book.";  
+}
+var rd;
+
+function check1()
+{
+  rd=document.querySelector('input[name="radio-group1"]:checked').value;
+
+      (typeof $('[name=radio-group1]:checked').val() != "undefined")
+       {
+          $('#sub').html( $('[name=radio-group1]:checked').val());
+       }
+
+       
+}
+function assign()
+{
+ document.getElementById("sub2").innerHTML=rd;
+ document.getElementById("sub3").innerHTML=rd; 
+}
+function al()
+{
+  alert("Details submitted Successfully");
+}
+
+
+</script>
+
+<style type="text/css">
+  .page{
+
+  visibility: hidden;
+}
+body{
+font-family: 'Raleway', sans-serif;
+background:linear-gradient(white,#e9e9e9);
+}
+</style>
+
+</head>
+<body onload="check()+store_disp_1()" style="background:white;">
+
+<script>
+  $(document).ready(function(){
+    $('body').scrollTop(0);
+});
+</script>
+
+  <nav class="navbar navbar-default" style="min-height:90px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nb" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img width="70" height="70" alt="Brand" src="logo.png">
+      </a>
+      </div>
+      <div  class="collapse navbar-collapse" id="nb">
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="howitworks.html">How it Works ?</a></li>
+        <li><a href="storelist.html">Our store Listings</a></li>    
+        <li><a href="#">Be a store partner</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Store Login</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+
+<div class="container">
+  <form id="multiForm" method="GET" action="" onSubmit="showValues(this)">
+
+<div id="page1" class="page" style="visibility:visible;">
+  <div id="p4">
+      <div class="row" id="list" >
+      <center><h2>Booking Details</h2></center> 
+    <div class="col-md-offset-3 col-md-6" id="booking" >
+     
+      <div class="heading" >
+          <span style="margin-left:24px;" id="x1"></span>   
+        <div class="pull-right">
+         <img src="#" alt="vector-icon" class="img-responsive">
+        </div>
+      </div>
+
+      <div id="sub-options" style="margin-left:20px;">
+         <div>
+            <input id="radio-4" class="radio-custom" name="radio-group1" type="radio" value="1">
+            <label for="radio-4" class="radio-custom-label">1st Choice</label>
+        </div>
+        <div>
+            <input id="radio-5" class="radio-custom" name="radio-group1" type="radio" value="2">
+            <label for="radio-5" class="radio-custom-label">2nd Choice</label>
+        </div>
+        <div>
+            <input id="radio-6" class="radio-custom" name="radio-group1" type="radio" value="3">
+            <label for="radio-6" class="radio-custom-label">3rd Choice</label>
+        </div>
+          <div>
+            <input id="radio-7" class="radio-custom" name="radio-group1" type="radio" value="4">
+            <label for="radio-7" class="radio-custom-label">4th choice</label>
+        </div>
+        <div>
+            <input id="radio-8" class="radio-custom" name="radio-group1" type="radio" value="5">
+            <label for="radio-8" class="radio-custom-label">5th Choice</label>
+        </div>
+
+      </div>
+
+        <br><br>
+         
+    <div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+     <a href="" style="text-decoration:none; color:white;"><input type="button" value="View Stores" name="" class="btn btn-block" 
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none ;" 
+      >
+    </a>
+    </div>
+
+    <div class="col-md-6"  style="padding-left:0px; padding-right:0px;">
+    <input type="button" value="Next" class="pull-right btn btn-block" id="next1" 
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none ;" 
+    onclick="check1()">
+     </div> 
+   
+   </div>
+  </div>
+  <div>
+      <div style="margin:25%;"></div>
+  </div>
+</div>
+
+
+
+<div id="page2" class="page" onmousemove="store_disp_2()">
+        <div class="row" id="p21">
+    <div class="col-lg-6 col-lg-offset-3" style="border:1px solid #d9d9d9;background-color:#fff; padding:0px">
+      <div class="panel panel-default ">
+      <div class="panel-body heading">
+            <p style="margin-left:24px;" id="x2"><img src="#" alt="vector-icon" class="img-responsive pull-right"> </p><p>
+            <span class="glyphicon glyphicon-check" style="margin-left:24px;"></span> 
+            <span id="sub"></span>
+            </p> 
+                   
+      </div>
+    </div>
+        <p id="fs">Hardware Material Store</p>
+        <div>
+          <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" value="chk_a">
+          <label for="checkbox-1" class="checkbox-custom-label">First Choice</label>
+      
+          <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox" value="chk_b">
+          <label for="checkbox-2" class="checkbox-custom-label">Second Choice</label>
+       
+          <input id="checkbox-3" class="checkbox-custom" name="checkbox-3" type="checkbox" value="chk_c">
+          <label for="checkbox-3" class="checkbox-custom-label">Third Choice</label>    
+        </div>
+
+         <p id="fs">Select the Location</p>
+          <div class="form-group">
+            <select class="form-control" name="select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p id="fs">Enter your Address</p>
+            <input type="text" class="form-control" name="addr">
+          </div>
+
+          <div class="form-group">
+            <p id="fs">Enter any Landmark (Optional)</p>
+            <input type="text" class="form-control" name="land">
+          </div>
+
+          <div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+     <a href="#p4" style="text-decoration:none; color:white;"><input type="button" value="Go Back" name="" class="btn btn-block" 
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none;"
+      onclick="showLayer('page1')">
+      </a>
+    </div>
+
+    <div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+  <input type="button" value="Next" name="" class="btn btn-block" id="next2" 
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none;" 
+     onclick="showLayer('page3')">
+    </div>
+
+    </div>
+  </div>
+    <div>
+      <div style="margin:25%;"></div>
+  </div> 
+</div>
+  
+
+
+<div id="page3" class="page" onmousemove="assign()+store_disp_3()">
+    <div id="opd">
+     <div class="row" id="upload">
+    <div class="col-md-offset-3 col-md-6" id="booking">
+     <div class="panel panel-default ">
+      <div class="panel-body heading">
+            <p style="margin-left:24px;" id="x3"><img src="#" alt="vector-icon" class="img-responsive pull-right"> </p>
+            <p><span class="glyphicon glyphicon-check" style="margin-left:24px;"></span> <span id="sub2"></span>
+                                     </p> 
+                   
+      </div>
+    </div>
+    <p id="uploadtext" style="margin-left:20px; margin-right: 20px;"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit<br>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit<br>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+   
+    <script>
+      $(document).ready(function(){
+    $("#to_toggle").click(function(){
+        $("#up").toggle();
+    });
+        }); 
+    </script>
+    <div id="up">
+    <!--<h4 style="margin-left:20px;"><b> Upload the material list</b>&nbsp;<span class="glyphicon glyphicon-upload"></span></h4><input type="file" style="margin-left:20px;" name="PHOTO"> 
+    -->
+
+          <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+            <div class="fileUpload btn btn-primary">
+              <span>Upload Material List &nbsp;&nbsp;&nbsp;</span><span class="glyphicon glyphicon-upload"></span>
+              <input id="uploadBtn" type="file" class="upload" />
+            </div>
+
+    <script>
+        document.getElementById("uploadBtn").onchange=function() 
+        {
+        document.getElementById("uploadFile").value=this.value;
+        }; 
+    </script>
+    </div>
+    <div class="checkbox">
+    <label style="margin-left:20px;"><input type="checkbox" id="to_toggle">I don't have a list</label>
+</div><br>
+   
+    <div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+     <a href="#p21" style="text-decoration:none; color:white;"><input type="button" value="Go Back" name="" class="btn btn-block" 
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none;" 
+     onclick="showLayer('page2')"></a>
+    </div>
+
+    <div class="col-md-6"  style="padding-left:0px; padding-right:0px;">
+  <input type="button" value="Next" name="" class="btn btn-block" id="next3"
+      style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none;" 
+     onclick="showLayer('page4')">
+     </div> 
+    
+   </div>
+  
+  </div>
+</div>
+  <div>
+      <div style="margin:25%;"></div>
+  </div> 
+</div>
+
+
+
+<div id="page4" class="page" onmouseenter="f1()+f2()+assign()+store_disp_4()">
+  <div class="row" id="p1a">
+    <div class="col-lg-6 col-lg-offset-3" style="border:1px solid #d9d9d9;background-color:#fff; padding:0px">
+              <div class="panel panel-default ">
+      <div class="panel-body heading">
+            <p style="margin-left:24px;" id="x4">
+            <img src="#" alt="vector-icon" class="img-responsive pull-right"> </p>
+            <p>
+            <span class="glyphicon glyphicon-check" style="margin-left:24px;"></span> <span id="sub3"></span>
+                                     </p> 
+                   
+      </div>
+    </div>
+        <h2>Select your Date & Time for Booking</h2> 
+        <p><br></p>
+        <input type="button" class="btn btn-danger" value="Check Today's Booking Availability" data-toggle="modal" data-target="#myModal" id="ca">
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title" id="p0"></h4>
+                </div>
+                <div class="modal-body">
+                  <p id="p1"> </p>
+                  <p id="p2"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Okay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <h4><span style="font-size:24px;"> Date: </span><input type="date" name="cal_date" min="" max="" id="dt" onchange="dis()+f2()"> </h4>
+        <p id="demo" style="font-size:17px;"></p>  
+        <p id="fs">Time : 
+        
+          <div class="form-group">
+            <div>
+            <input id="radio-1" class="radio-custom" name="radio-group2" type="radio" value="10:00 &dash; 12:00">
+            <label for="radio-1" class="radio-custom-label" id="l1">10:00 - 12:00</label>
+            </div>
+
+            <div>
+            <input id="radio-2" class="radio-custom" name="radio-group2" type="radio" value="12:00 &dash; 3:00">
+            <label for="radio-2" class="radio-custom-label" id="l2">12:00 - 03:00</label>
+            </div>
+
+            <div>
+            <input id="radio-3" class="radio-custom" name="radio-group2" type="radio" value="03:00 &dash; 06:00">
+            <label for="radio-3" class="radio-custom-label" id="l3">03:00 - 06:00</label>
+            </div>
+         
+         </div>
+         
+         <br>
+         <div class="col-lg-6" style="padding:0px;">
+        <a href="#opd" style="text-decoration:none; color:white;"><input type="button"  value="Go Back" class="btn btn-block" 
+          style="margin:40px 0px 0px 0px;border-radius:0px;background-color:#eea134 ; padding:10px 5px 10px 5px ;border:none ;" 
+        onClick="showLayer('page3')"></a> 
+        </div>
+         <div class="col-lg-6" style="padding:0px;">
+        <input type="button"  value="Save Changes" class="btn btn-block" 
+        style="margin:40px 0px 0px 0px;border-radius:0px; padding:10px 5px 10px 5px ;border:none ;background-color:#eea134 ;"
+        onclick="al()">
+        </div> 
+        </p> 
+       <center><br><br><input type="submit" name="" value="Submit Details" class="btn btn-warning"></center> 
+        </div>
+        
+        </div>   
+        <div>
+          <div style="margin:25%;">
+            
+          </div>
+        </div>      
+</div>
+
+</form>
+</div>
+<script>
+  $(document).ready(function(){
+ $("#page1").show();
+ $("#page2").hide();
+ $("#page3").hide();
+ $("#page4").hide();
+$("#next1").click(function(){
+        
+       
+    });
+$("#next2").click(function(){
+        $("#page3").show();
+        $("#page1").hide();
+        $("#page2").hide();
+        $("#page4").hide();
+    });
+$("#next3").click(function(){
+        $("#page4").show();
+        $("#page1").hide();
+        $("#page2").hide();
+        $("#page3").hide();
+    });
+  
+  
+    
+});
+</script>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
